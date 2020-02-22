@@ -10,8 +10,8 @@
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
     <title>Matrix Template - The Ultimate Multipurpose admin template</title>
-    <link href="assets/libs/flot/css/float-chart.css" rel="stylesheet">
     <link href="dist/css/style.min.css" rel="stylesheet">
+    <link href="dist/css/custom.css" rel="stylesheet">
 
 </head>
 
@@ -135,6 +135,47 @@
                         </li>
 
                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="font-24 mdi mdi-cart-plus"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right mailbox animated bounceInDown" aria-labelledby="2">
+                                <ul class="list-style-none">
+                                    <li>
+                                        <div class="shopping-cart">
+                                            <div class="shopping-cart-header">
+                                                <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">2</span>
+                                                <div class="shopping-cart-total">
+                                                    <span class="lighter-text">Total:</span>
+                                                    <span class="main-color-text">$300</span>
+                                                </div>
+                                            </div>
+                                            <!--end shopping-cart-header -->
+
+                                            <ul class="shopping-cart-items">
+                                                <li class="clearfix">
+                                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg" alt="item1" />
+                                                    <span class="item-name">Sony DSC-RX100M III</span>
+                                                    <span class="item-price">$100</span>
+                                                    <span class="item-quantity">Quantity: 01</span>
+                                                </li>
+
+                                                <li class="clearfix">
+                                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item2.jpg" alt="item1" />
+                                                    <span class="item-name">KS Automatic Mechanic...</span>
+                                                    <span class="item-price">$200</span>
+                                                    <span class="item-quantity">Quantity: 01</span>
+                                                </li>
+
+                                            </ul>
+
+                                            <a href="#" class="add-to-cart-button">Checkout</a>
+                                        </div>
+                                        <!--end shopping-cart -->
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated">
                                 <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
@@ -160,20 +201,36 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav" class="p-t-30">
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.html" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
-                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="product.html" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Product</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="tables.html" aria-expanded="false"><i class="mdi mdi-border-inside"></i><span class="hide-menu">Product Tables</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.html" aria-expanded="false"><span class="hide-menu">Dashboard</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="tables.html" aria-expanded="false"><span class="hide-menu">Product Tables</span></a></li>
 
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Forms </span></a>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><span class="hide-menu">Category </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="form-basic.html" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Form Basic </span></a></li>
+                                <li class="sidebar-item"><a href="product.html" class="sidebar-link"><span class="hide-menu"> Consumer Electronics </span></a></li>
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span class="hide-menu"> Apparel </span></a></li>
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span class="hide-menu"> Packaging & Printing </span></a></li>
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span class="hide-menu"> Machinery </span></a></li>
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span class="hide-menu"> Beauty & Personal Care </span></a></li>
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span class="hide-menu"> Vehicles & Accessories </span></a></li>
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span class="hide-menu"> Timepieces, Jewelry, Eyewear </span></a></li>
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span class="hide-menu"> Furniture </span></a></li>
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span class="hide-menu"> Belt Accessories </span></a></li>
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span class="hide-menu"> Gloves & Mittens </span></a></li>
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span class="hide-menu"> Hats & Caps </span></a></li>
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span class="hide-menu"> Hair Accessories</span></a></li>
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span class="hide-menu"> Women's Clothing </span></a></li>
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span class="hide-menu"> Metal Belts</span></a></li>
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span class="hide-menu"> Automobiles </span></a></li>
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span class="hide-menu"> Bus Accessories</span></a></li>
                             </ul>
                         </li>
 
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-account-key"></i><span class="hide-menu">Authentication </span></a>
+                      
+
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><span class="hide-menu">Authentication </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="authentication-login.html" class="sidebar-link"><i class="mdi mdi-all-inclusive"></i><span class="hide-menu"> Login </span></a></li>
-                                <li class="sidebar-item"><a href="authentication-register.html" class="sidebar-link"><i class="mdi mdi-all-inclusive"></i><span class="hide-menu"> Register </span></a></li>
+                                <li class="sidebar-item"><a href="authentication-login.html" class="sidebar-link"><span class="hide-menu"> Login </span></a></li>
+                                <li class="sidebar-item"><a href="authentication-register.html" class="sidebar-link"><span class="hide-menu"> Register </span></a></li>
                             </ul>
                         </li>
 
@@ -183,6 +240,7 @@
             </div>
             <!-- End Sidebar scroll-->
         </aside>
+        
         <div class="page-wrapper">
             <div class="page-breadcrumb">
                 <div class="row">
@@ -207,21 +265,21 @@
                                 <div class="card-body">
                                     <h4 class="card-title">Product Info</h4>
                                     <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="product_id">PRODUCT ID</label>
+                                        <label class="col-md-3 control-label" for="product_id">Product Id</label>
                                         <div class="col-md-9">
                                             <input id="product_id" name="product_id" placeholder="PRODUCT ID" class="form-control input-md" required="" type="text">
 
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="product_name">PRODUCT NAME</label>
+                                        <label class="col-md-3 control-label" for="product_name">Product Name</label>
                                         <div class="col-md-9">
                                             <input id="product_name" name="product_name" placeholder="PRODUCT NAME" class="form-control input-md" required="" type="text">
 
                                         </div>
                                     </div>
                                      <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="product_name">PRODUCT PIRCE</label>
+                                        <label class="col-md-3 control-label" for="product_name">Product Price</label>
                                         <div class="col-md-9">
                                             <input id="product_price" name="product_price" placeholder="PRODUCT PRICE" class="form-control input-md" required="" type="text">
 
@@ -230,7 +288,7 @@
 
                                     <!-- Text input-->
                                     <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="product_name_fr">PRODUCT DESCRIPTION FR</label>
+                                        <label class="col-md-3 control-label" for="product_name_fr">Product Description</label>
                                         <div class="col-md-9">
                                             <input id="product_name_fr" name="product_name_fr" placeholder="PRODUCT DESCRIPTION FR" class="form-control input-md" required="" type="text">
 
@@ -239,7 +297,7 @@
 
                                     <!-- Select Basic -->
                                     <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="product_categorie">PRODUCT CATEGORY</label>
+                                        <label class="col-md-3 control-label" for="product_categorie">Product Category</label>
                                         <div class="col-md-9">
                                             <select id="product_categorie" name="product_categorie" class="form-control">
                                                      <option value="AL">Alabama</option>
@@ -263,7 +321,7 @@
 
                                     <!-- Text input-->
                                     <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="available_quantity">AVAILABLE QUANTITY</label>
+                                        <label class="col-md-3 control-label" for="available_quantity">Avaliable Quantity</label>
                                         <div class="col-md-9">
                                             <input id="available_quantity" name="available_quantity" placeholder="AVAILABLE QUANTITY" class="form-control input-md" required="" type="text">
 
@@ -272,7 +330,7 @@
 
                                     <!-- Text input-->
                                     <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="product_weight">PRODUCT WEIGHT</label>
+                                        <label class="col-md-3 control-label" for="product_weight">Product Weight</label>
                                         <div class="col-md-9">
                                             <input id="product_weight" name="product_weight" placeholder="PRODUCT WEIGHT" class="form-control input-md" required="" type="text">
 
@@ -281,7 +339,7 @@
 
                                     <!-- Textarea -->
                                     <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="product_description">PRODUCT DESCRIPTION</label>
+                                        <label class="col-md-3 control-label" for="product_description">Product Description</label>
                                         <div class="col-md-9">
                                             <textarea class="form-control" id="product_description" name="product_description" placeholder="PRODUCT DESCRIPTION"></textarea>
                                         </div>
@@ -289,16 +347,7 @@
 
                                     <!-- Text input-->
                                     <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="stock_alert">STOCK ALERT</label>
-                                        <div class="col-md-9">
-                                            <input id="stock_alert" name="stock_alert" placeholder="STOCK ALERT" class="form-control input-md" required="" type="text">
-
-                                        </div>
-                                    </div>
-
-                                    <!-- Text input-->
-                                    <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="author">AUTHOR</label>
+                                        <label class="col-md-3 control-label" for="author">Author</label>
                                         <div class="col-md-9">
                                             <input id="author" name="author" placeholder="AUTHOR" class="form-control input-md" required="" type="text">
 
@@ -307,21 +356,21 @@
 
                                     <!-- Text input-->
                                     <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="approuved_by">APPROUVED BY</label>
+                                        <label class="col-md-3 control-label" for="approuved_by">Approve By</label>
                                         <div class="col-md-9">
                                             <input id="approuved_by" name="approuved_by" placeholder="APPROUVED BY" class="form-control input-md" required="" type="text">
                                         </div>
                                     </div>
                                     <!-- File Button -->
                                     <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="filebutton">main_image</label>
+                                        <label class="col-md-3 control-label" for="filebutton">Main_image</label>
                                         <div class="col-md-9">
                                             <input id="filebutton" name="filebutton" class="input-file" type="file">
                                         </div>
                                     </div>
                                     <!-- File Button -->
                                     <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="filebutton">auxiliary_images</label>
+                                        <label class="col-md-3 control-label" for="filebutton">Auxiliary_images</label>
                                         <div class="col-md-9">
                                             <input id="filebutton" name="filebutton" class="input-file" type="file">
                                         </div>
