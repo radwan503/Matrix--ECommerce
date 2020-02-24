@@ -8,8 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
     <title>Matrix Template - The Ultimate Multipurpose admin template</title>
+    <!-- Custom CSS -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="dist/css/jquery.jqzoom.css" rel="stylesheet">
     <link href="dist/css/style.min.css" rel="stylesheet">
     <link href="dist/css/custom.css" rel="stylesheet">
 
@@ -48,19 +52,6 @@
 
                     <ul class="navbar-nav float-left mr-auto">
                         <li class="nav-item d-none d-md-block"><a class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)" data-sidebartype="mini-sidebar"><i class="mdi mdi-menu font-24"></i></a></li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="d-none d-md-block">Create New <i class="fa fa-angle-down"></i></span>
-                                <span class="d-block d-md-none"><i class="fa fa-plus"></i></span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </li>
 
                         <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
                             <form class="app-search position-absolute">
@@ -225,8 +216,6 @@
                             </ul>
                         </li>
 
-                      
-
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><span class="hide-menu">Authentication </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
                                 <li class="sidebar-item"><a href="authentication-login.html" class="sidebar-link"><span class="hide-menu"> Login </span></a></li>
@@ -240,7 +229,7 @@
             </div>
             <!-- End Sidebar scroll-->
         </aside>
-        
+
         <div class="page-wrapper">
             <div class="page-breadcrumb">
                 <div class="row">
@@ -257,134 +246,1783 @@
                     </div>
                 </div>
             </div>
+
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="card">
-                            <form class="form-horizontal">
-                                <div class="card-body">
-                                    <h4 class="card-title">Product Info</h4>
-                                    <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="product_id">Product Id</label>
-                                        <div class="col-md-9">
-                                            <input id="product_id" name="product_id" placeholder="PRODUCT ID" class="form-control input-md" required="" type="text">
+                        <div class="product-top-banner">
+                            <div class="text-xs-center" style="color: #fff; min-height: 300px; padding: 65px;"></div>
+                        </div>
+                        <div class="product-container">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-1.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-2.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
 
                                         </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="product_name">Product Name</label>
-                                        <div class="col-md-9">
-                                            <input id="product_name" name="product_name" placeholder="PRODUCT NAME" class="form-control input-md" required="" type="text">
-
-                                        </div>
-                                    </div>
-                                     <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="product_name">Product Price</label>
-                                        <div class="col-md-9">
-                                            <input id="product_price" name="product_price" placeholder="PRODUCT PRICE" class="form-control input-md" required="" type="text">
-
-                                        </div>
-                                    </div>
-
-                                    <!-- Text input-->
-                                    <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="product_name_fr">Product Description</label>
-                                        <div class="col-md-9">
-                                            <input id="product_name_fr" name="product_name_fr" placeholder="PRODUCT DESCRIPTION FR" class="form-control input-md" required="" type="text">
-
-                                        </div>
-                                    </div>
-
-                                    <!-- Select Basic -->
-                                    <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="product_categorie">Product Category</label>
-                                        <div class="col-md-9">
-                                            <select id="product_categorie" name="product_categorie" class="form-control">
-                                                     <option value="AL">Alabama</option>
-                                                <option value="AR">Arkansas</option>
-                                                <option value="IL">Illinois</option>
-                                                <option value="IA">Iowa</option>
-                                                <option value="KS">Kansas</option>
-                                                <option value="KY">Kentucky</option>
-                                                <option value="LA">Louisiana</option>
-                                                <option value="MN">Minnesota</option>
-                                                <option value="MS">Mississippi</option>
-                                                <option value="MO">Missouri</option>
-                                                <option value="OK">Oklahoma</option>
-                                                <option value="SD" selected>South Dakota</option>
-                                                <option value="TX">Texas</option>
-                                                <option value="TN">Tennessee</option>
-                                                <option value="WI">Wisconsin</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <!-- Text input-->
-                                    <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="available_quantity">Avaliable Quantity</label>
-                                        <div class="col-md-9">
-                                            <input id="available_quantity" name="available_quantity" placeholder="AVAILABLE QUANTITY" class="form-control input-md" required="" type="text">
-
-                                        </div>
-                                    </div>
-
-                                    <!-- Text input-->
-                                    <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="product_weight">Product Weight</label>
-                                        <div class="col-md-9">
-                                            <input id="product_weight" name="product_weight" placeholder="PRODUCT WEIGHT" class="form-control input-md" required="" type="text">
-
-                                        </div>
-                                    </div>
-
-                                    <!-- Textarea -->
-                                    <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="product_description">Product Description</label>
-                                        <div class="col-md-9">
-                                            <textarea class="form-control" id="product_description" name="product_description" placeholder="PRODUCT DESCRIPTION"></textarea>
-                                        </div>
-                                    </div>
-
-                                    <!-- Text input-->
-                                    <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="author">Author</label>
-                                        <div class="col-md-9">
-                                            <input id="author" name="author" placeholder="AUTHOR" class="form-control input-md" required="" type="text">
-
-                                        </div>
-                                    </div>
-
-                                    <!-- Text input-->
-                                    <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="approuved_by">Approve By</label>
-                                        <div class="col-md-9">
-                                            <input id="approuved_by" name="approuved_by" placeholder="APPROUVED BY" class="form-control input-md" required="" type="text">
-                                        </div>
-                                    </div>
-                                    <!-- File Button -->
-                                    <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="filebutton">Main_image</label>
-                                        <div class="col-md-9">
-                                            <input id="filebutton" name="filebutton" class="input-file" type="file">
-                                        </div>
-                                    </div>
-                                    <!-- File Button -->
-                                    <div class="form-group row">
-                                        <label class="col-md-3 control-label" for="filebutton">Auxiliary_images</label>
-                                        <div class="col-md-9">
-                                            <input id="filebutton" name="filebutton" class="input-file" type="file">
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="border-top">
-                                    <div class="card-body">
-                                        <button type="button" class="btn btn-primary">Submit</button>
                                     </div>
                                 </div>
-                            </form>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-3.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-4.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-discount-label">-12%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Men's Blue Shirt</a></h3>
+                                            <div class="price">
+                                                $17.60
+                                                <span>$20.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-5.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-6.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-7.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-8.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid">
+                                <div class="home-category-info-header">
+                                    <h2>Consumer Electronics</h2>
+                                    <span class="home-category-info-header-line" data-spm-anchor-id="a2700.8293689.categoryInfoIndustry-1.i0.190167afvYWUn6"></span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-1.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-2.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-3.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-4.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-discount-label">-12%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Men's Blue Shirt</a></h3>
+                                            <div class="price">
+                                                $17.60
+                                                <span>$20.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-5.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-6.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-7.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-8.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-1.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-2.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-3.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-4.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-discount-label">-12%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Men's Blue Shirt</a></h3>
+                                            <div class="price">
+                                                $17.60
+                                                <span>$20.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-5.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-6.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-7.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-8.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-1.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-2.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-3.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-4.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-discount-label">-12%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Men's Blue Shirt</a></h3>
+                                            <div class="price">
+                                                $17.60
+                                                <span>$20.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-5.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-6.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-7.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-8.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-1.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-2.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-3.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-4.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-discount-label">-12%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Men's Blue Shirt</a></h3>
+                                            <div class="price">
+                                                $17.60
+                                                <span>$20.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-5.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-6.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-7.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-8.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-1.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-2.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-3.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-4.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-discount-label">-12%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Men's Blue Shirt</a></h3>
+                                            <div class="price">
+                                                $17.60
+                                                <span>$20.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-5.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-6.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-7.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-8.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-1.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-2.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-3.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-4.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-discount-label">-12%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Men's Blue Shirt</a></h3>
+                                            <div class="price">
+                                                $17.60
+                                                <span>$20.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-5.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-6.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-7.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-8.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-1.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-2.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-3.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-4.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-discount-label">-12%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Men's Blue Shirt</a></h3>
+                                            <div class="price">
+                                                $17.60
+                                                <span>$20.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-5.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-6.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-7.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-8.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-1.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-2.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-3.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-4.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-discount-label">-12%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Men's Blue Shirt</a></h3>
+                                            <div class="price">
+                                                $17.60
+                                                <span>$20.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-5.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-6.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-7.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-8.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-1.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-2.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-3.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-4.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-discount-label">-12%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Men's Blue Shirt</a></h3>
+                                            <div class="price">
+                                                $17.60
+                                                <span>$20.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-5.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-6.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-7.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-8.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-1.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-2.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-3.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-4.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-discount-label">-12%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Men's Blue Shirt</a></h3>
+                                            <div class="price">
+                                                $17.60
+                                                <span>$20.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-5.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-6.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-7.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-8.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-1.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-2.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-3.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-4.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-discount-label">-12%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Men's Blue Shirt</a></h3>
+                                            <div class="price">
+                                                $17.60
+                                                <span>$20.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-5.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-6.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-7.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-8.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-1.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-2.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-3.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-4.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-discount-label">-12%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Men's Blue Shirt</a></h3>
+                                            <div class="price">
+                                                $17.60
+                                                <span>$20.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-5.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-6.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-7.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-8.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-1.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-2.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-3.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-4.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-discount-label">-12%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Men's Blue Shirt</a></h3>
+                                            <div class="price">
+                                                $17.60
+                                                <span>$20.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-5.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-6.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-7.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-8.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-1.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-2.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-3.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-4.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-discount-label">-12%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Men's Blue Shirt</a></h3>
+                                            <div class="price">
+                                                $17.60
+                                                <span>$20.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-5.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-6.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid4">
+                                        <div class="product-image4">
+                                            <a href="#">
+                                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-7.jpg">
+                                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-8.jpg">
+                                            </a>
+                                            <ul class="social">
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                            <span class="product-new-label">New</span>
+                                            <span class="product-discount-label">-10%</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">Women's Black Top</a></h3>
+                                            <div class="price">
+                                                $14.40
+                                                <span>$16.00</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="footer-containerjustify-content-center p-0 mx-0">
+                            <div class="card py-5 border-0 px-0 mx-0">
+                                <div class="card-body text-center">
+                                    <div class="row justify-content-center">
+                                        <div class="col-auto">
+                                            <h6><b>Still have more questions ?</b></h6><small class="text-muted">Call/Text <span class="mx-2"><b>+91.1630.412.999</b></span>and with real person.</small>
+                                            <div class="row justify-content-center">
+                                                <div class="col-10">
+                                                    <button type="button" class="btn btn-primary btn-lg btn-block my-5">Try it for free</button>
+                                                    <h6> <b>100% Money Back Guarantee</b></h6> <small class="text-muted">If you'r not satsified for any reason, we'll refund your money</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <footer>
+                                  <div class="row mb-0 pt-5 row-2 justify-content-md-around justify-content-center text-center">
+                                    <div class="col-auto">
+                                        <figure class="figure"><i class="fa fa-cubes" aria-hidden="true"></i>
+                                            <figcaption class="figure-caption ">HIGHDELIVERY SPEED</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-auto">
+                                        <figure class="figure"><i class="fa fa-cogs" aria-hidden="true"></i>
+                                            <figcaption class="figure-caption ">24x7 SUPPORT</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-auto">
+                                        <figure class="figure"><i class="fa fa-cog" aria-hidden="true"></i>
+                                            <figcaption class="figure-caption ">COMPETITVE PRICES</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-auto">
+                                        <figure class="figure"><i class="fa fa-recycle" aria-hidden="true"></i>
+                                            <figcaption class="figure-caption ">STANDARD DESGIN</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-auto">
+                                        <figure class="figure"><i class="fa fa-rocket" aria-hidden="true"></i>
+                                            <figcaption class="figure-caption ">USE OF TRENDS</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="row mb-0 mt-5 mx-4 row-2 justify-content-xl-around justify-content-sm-between">
+                                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 pt-4 order-1">
+                                        <ul class="list-unstyled">
+                                            <li class="mt-md-0 mt-4">Our Solution</li>
+                                            <li>Intergrated Platform Security </li>
+                                            <li>Core Features</li>
+                                            <li>Product Features and Services</li>
+                                            <li>Pricing</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 pt-4 order-2">
+                                        <ul class="list-unstyled">
+                                            <li class="mt-md-0 mt-4">Your needs</li>
+                                            <li>Intergrated Platform Security </li>
+                                            <li>Core Features</li>
+                                            <li>Product Features</li>
+                                            <li>Pricing</li>
+                                            <li>Product Features</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xl-auto col-lg-6 col-md-6 pt-4 col-sm-6 my-sm-0 order-md-3 order-sm-1 d-flex">
+                                        <ul class="list-unstyled">
+                                            <li class="mt-md-0 mt-4">Offer</li>
+                                            <li>Intergrated Security </li>
+                                            <li>Core Features</li>
+                                            <li>Product Features </li>
+                                            <li>Pricing</li>
+                                            <li>Intergrated Security </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xl-auto text-left col-lg-4 col-md-4 col-sm-6 col-12 pt-4 my-sm-0 order-6 my-auto">
+                                        <div class="input-group-lg input-group mb-3 mt-md-0 mt-4">
+                                            <input type="text" class="form-control" placeholder="Enter your e-mail address" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-success" type="button" id="button-addon2"> <b>Join</b></button>
+                                            </div>
+                                        </div>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <p class="mb-0 pb-0 mt-5">FOLLOW THE WEB ON SOCIAL NETWORKS</p>
+                                            </li>
+                                            <li>
+                                                <a class="fa fa-facebook"></a>
+                                                <a class="fa fa-twitter"></a>
+                                                <a class="fa fa-instagram"></a>
+                                                <a class="fa fa-linkedin"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr class="line">
+                                <div class="row mx-xl-5 mx-lg-4 mx-3 py-3 justify-content-around ">
+                                    <div class="col">
+                                        <h5 class="text-muted mb-4"><b>WHY IS GOOD CHOICE FOR YOUR BUSINESS </b> </h5><small>Whether your company is made up of five people or 500, internet businesses will always have scarce resources. You will never have enough money, engineers, time or talent. I've never met an internet company executive that complained about having too many talented engineers. Learning how to do more with less is one of the most important skills of an entrepreneur. Every decision will come with the sacrifice of something else, so you'll need to fully understand your financial state at any given moment. Hiring, especially early on, will feel like the biggest decision of your life.This is what I call scrappy validation of assumptions -- a process of continuous learning. </small>
+                                    </div>
+                                </div>
+                                <hr class="line">
+                                <div class="row justify-content-lg-around mx-xl-5 mx-lg-4 mx-3 py-3">
+                                    <div class="col order-1 align-self-center">
+                                        <p class="mb-0 text-uppercase">we're accountable for seven days a week, 24 hours a day</p><small>Contact Number : 789-421-3600 <br> Email Address:DG@gmail.com </small>
+                                    </div>
+                                    <div class="col-auto my-sm-0 order-6 my-auto pt-sm-0 pt-3">
+                                        <ul class="list-inline third-row first">
+                                            <li class="list-inline-item active-1 "> <span>SMART ORDER</span> </li>
+                                            <li class="list-inline-item"><span>GET STARTED</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr class="line">
+                                <div class="row text-center py-3">
+                                    <div class="col">
+                                        <p class="text-muted"><b>ALL RIGHTS ARE RESERVED BY Digital Bangla soft Inc</b> </p>
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--    product details modal-->
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <!-- product -->
+                    <div class="product-content product-wrap clearfix product-deatil">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-12 col-xs-12 ">
+                                <div class="row">
+                                    <div class="clearfix" id="content" style="margin-top:100px;height:500px;width:500px;" >
+    <div class="clearfix">
+        <a href="./dist/images/triumph_big1.jpg" class="jqzoom" rel='gal1'  title="triumph" >
+            <img src="./dist/images/triumph_small1.jpg"  title="triumph"  style="border: 4px solid #666;">
+        </a>
+	<select style="position:absolute;left:800px;top:120px;"><option>test ie6</option></select>
+    </div>
+	<br/>
+ <div class="clearfix" >
+	<ul id="thumblist" class="clearfix" >
+		<li><a class="zoomThumbActive" href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: './dist/images/triumph_small1.jpg',largeimage: './dist/images/triumph_big1.jpg'}"><img src='./dist/images/thumbs/triumph_thumb1.jpg'></a></li>
+		<li><a href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: './dist/images/triumph_small2.jpg',largeimage: './dist/images/triumph_big2.jpg'}"><img src='./dist/images/thumbs/triumph_thumb2.jpg'></a></li>
+		<li><a  href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: './dist/images/triumph_small3.jpg',largeimage: './dist/images/triumph_big3.jpg'}"><img src='./dist/images/thumbs/triumph_thumb3.jpg'></a></li>
+	</ul>
+	</div>
+</div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-sm-12 col-xs-12">
+
+                                <h2 class="name">
+                                          Product Name Title Here 
+                                          <small>Product by <a href="javascript:void(0);">Adeline</a></small>
+                                          <i class="fa fa-star fa-2x text-primary"></i>
+                                          <i class="fa fa-star fa-2x text-primary"></i>
+                                          <i class="fa fa-star fa-2x text-primary"></i>
+                                          <i class="fa fa-star fa-2x text-primary"></i>
+                                          <i class="fa fa-star fa-2x text-muted"></i>
+                                          <span class="fa fa-2x"><h5>(109) Votes</h5></span>  
+                                          <a href="javascript:void(0);">109 customer reviews</a>
+                                        </h2>
+                                                            <hr>
+                                                            <h3 class="price-container">
+                                          $129.54
+                                          <small>*includes tax</small>
+                                        </h3>
+                                <div class="certified">
+                                    <ul>
+                                        <li><a href="javascript:void(0);">Delivery time<span>7 Working Days</span></a></li>
+                                        <li><a href="javascript:void(0);">Certified<span>Quality Assured</span></a></li>
+                                    </ul>
+                                </div>
+                                <hr>
+                                <div class="description description-tabs">
+                                    <ul id="myTab" class="nav nav-pills">
+                                        <li class="active"><a href="#more-information" data-toggle="tab" class="no-margin">Product Description </a></li>
+                                        <li class=""><a href="#specifications" data-toggle="tab">Specifications</a></li>
+
+                                    </ul>
+                                    <div id="myTabContent" class="tab-content">
+                                        <div class="tab-pane fade active in" id="more-information">
+                                            <br>
+                                            <strong>Description Title</strong>
+                                            <p>Integer egestas, orci id condimentum eleifend, nibh nisi pulvinar eros, vitae ornare massa neque ut orci. Nam aliquet lectus sed odio eleifend, at iaculis dolor egestas. Nunc elementum pellentesque augue sodales porta. Etiam aliquet rutrum turpis, feugiat sodales ipsum consectetur nec. </p>
+                                        </div>
+                                        <div class="tab-pane fade" id="specifications">
+                                            <br>
+                                            <dl class="">
+                                                <dt>Gravina</dt>
+                                                <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+                                                <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+                                                <dd>Eget lacinia odio sem nec elit.</dd>
+                                                <br>
+
+                                                <dt>Test lists</dt>
+                                                <dd>A description list is perfect for defining terms.</dd>
+                                                <br>
+
+                                                <dt>Altra porta</dt>
+                                                <dd>Vestibulum id ligula porta felis euismod semper</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                        <a href="javascript:void(0);" class="btn btn-success btn-lg">Add to cart ($129.54)</a>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                        <div class="btn-group pull-right">
+                                            <button class="btn btn-white btn-default"><i class="fa fa-star"></i> Add to wishlist </button>
+                                            <button class="btn btn-white btn-default"><i class="fa fa-envelope"></i> Contact Seller</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <!-- end product -->
                 </div>
             </div>
         </div>
@@ -394,14 +2032,12 @@
     <!-- Bootstrap tether Core JavaScript -->
     <script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
     <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
- 
+    <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="dist/js/jquery.jqzoom-core.js"></script>
 
-    <!--Menu sidebar -->
     <script src="dist/js/sidebarmenu.js"></script>
-    <!--Custom JavaScript -->
     <script src="dist/js/custom.min.js"></script>
 
-  
 
 </body>
 
